@@ -15,6 +15,7 @@ module.exports.fetchData = async(req, res) =>{
   try{
     const allData = await GoldItem.find();
     console.log(allData);
+    // res.rendner('home');
     res.json({Data: allData});
   }catch (error) {
     res.send('Error fetching data from mongodb');
