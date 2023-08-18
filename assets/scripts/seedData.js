@@ -13,10 +13,13 @@ const GoldItem = require('../../models/goldItem');
 
 
     // Remove existing data
-    // await GoldItem.deleteMany();
+    await GoldItem.deleteMany();
 
     // Seed sample data
     const sampleData = [
+      { name: 'Gold Necklace0', grams: 10, price: 0 },
+      { name: 'Gold Ring0', grams: 5, price: 0 },
+      { name: 'Gold Bracelet0', grams: 8, price: 0 },
       { name: 'Gold Necklace1', grams: 10, price: 0 },
       { name: 'Gold Ring1', grams: 5, price: 0 },
       { name: 'Gold Bracelet1', grams: 8, price: 0 },

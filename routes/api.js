@@ -4,6 +4,6 @@ const goldController = require('../controllers/goldItemController');
 
 router.get('/mockprice', goldController.generateRandomGoldPrice);
 router.get('/data', goldController.fetchData);
-router.put('/update', goldController.updateGoldItemPrice);
+router.get('/update', goldController.updateGoldItemPrice);
 
 module.exports = router;

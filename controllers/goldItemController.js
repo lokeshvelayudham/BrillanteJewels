@@ -29,12 +29,14 @@ module.exports.updateGoldItemPrice = async (req, res) => {
     const mockPrice = Math.random() * (maxPrice - minPrice) + minPrice;
 
     const items = await GoldItem.find();
+    // res.json({Data: items});
 
     items.forEach(async (item) => {
       const updatedPrice = mockPrice * item.grams;
       item.price = updatedPrice;
       await item.save();
     });
+    // res.json({data:items});
 
     res.json({ message: 'Gold prices updated successfully.',
               Data: items  });
